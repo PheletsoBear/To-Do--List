@@ -18,15 +18,15 @@
           Button
     -->
 
-    <div class="container color-light" [@projects]="projects.length">
+    <div class="container color-light" >
          <div class="col">
 
              <h2 class="col">Use this tool to add your To-Do List and remove it once it done</h2>
            
-             <form>
-                 <input  type="text" placeholder="Add To-Do Task" class="text" [(ngModel)]="projecttext"  />
+             <form (ngSubmit)= "additem()">
+                 <input  type="text" placeholder="Add To-Do Task" class="text" [(ngModel)]="projecttext" name="projecttext" />
                  <br>
-                 <input type="submit" class="submit-btn" value="Add Task" (click)="additem"/>
+                 <button type="submit" class="submit-btn">Add Task</button>
              </form>
     
         </div>

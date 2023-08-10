@@ -4,12 +4,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
+  
 })
 export class HomeComponent implements OnInit {
 
-  itemCounter: number = 0;
+  itemCounter: number =0;
   projecttext: string = "Code";
-  projects : string [] = [""] ;
+  projects :  string[] = []  ;
 
   constructor(){}
 
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
      this.projects.push(this.projecttext);
      this.projecttext = "";  
      this.itemCounter = this.projects.length; 
+     console.log(this.projects)
   
   }
   removeitem(i:number){
